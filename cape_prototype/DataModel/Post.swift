@@ -11,7 +11,6 @@ import Foundation
 public class Post: NSObject {
   
   let postID: String! //postNo
-  //let postNo: String?
   let posterEmail: String!
   let message: String!
   

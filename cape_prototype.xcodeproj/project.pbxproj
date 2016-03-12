@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E09AE1C7A417CBFEBFF4A932 /* libPods-cape_prototype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE9CE8ECC034DF963AD9CF4 /* libPods-cape_prototype.a */; };
+		EA286BC11C939D8C00CC9036 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286BC01C939D8C00CC9036 /* ChatMessageTableViewCell.swift */; };
+		EA286BC51C939E6700CC9036 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286BC31C939E6700CC9036 /* MessagesViewController.swift */; };
+		EA286BC61C939E6700CC9036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA286BC41C939E6700CC9036 /* ViewController.swift */; };
 		EA5CD4001C8E29C60043E80C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5CD3FF1C8E29C60043E80C /* Post.swift */; };
 		EA5E2F581C8BCFAA00B28349 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E2F571C8BCFAA00B28349 /* AppDelegate.swift */; };
-		EA5E2F5A1C8BCFAA00B28349 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E2F591C8BCFAA00B28349 /* ViewController.swift */; };
 		EA5E2F5D1C8BCFAA00B28349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5E2F5B1C8BCFAA00B28349 /* Main.storyboard */; };
 		EA5E2F5F1C8BCFAA00B28349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5E2F5E1C8BCFAA00B28349 /* Assets.xcassets */; };
 		EA5E2F621C8BCFAA00B28349 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5E2F601C8BCFAA00B28349 /* LaunchScreen.storyboard */; };
@@ -19,7 +21,9 @@
 		EA81B6191C92331600994B0E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81B6181C92331600994B0E /* PostViewModel.swift */; };
 		EA81B61B1C9237BA00994B0E /* PostsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81B61A1C9237BA00994B0E /* PostsGateway.swift */; };
 		EA81B61D1C923C2C00994B0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81B61C1C923C2C00994B0E /* Constants.swift */; };
-		EAA3E8D51C922D490047ED06 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA3E8D41C922D490047ED06 /* MessagesViewController.swift */; };
+		EAD9C4AB1C9371C300323924 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9C4AA1C9371C300323924 /* ChatMessage.swift */; };
+		EAD9C4AD1C93796600323924 /* MessagesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9C4AC1C93796600323924 /* MessagesGateway.swift */; };
+		EAD9C4B51C93933100323924 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9C4B41C93933100323924 /* UIColor+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +46,13 @@
 /* Begin PBXFileReference section */
 		16E10E9A3A14D524242FA8D4 /* Pods-cape_prototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cape_prototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-cape_prototype/Pods-cape_prototype.release.xcconfig"; sourceTree = "<group>"; };
 		2EE9CE8ECC034DF963AD9CF4 /* libPods-cape_prototype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cape_prototype.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA286BC01C939D8C00CC9036 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatMessageTableViewCell.swift; path = Controls/ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
+		EA286BC31C939E6700CC9036 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = Views/MessagesViewController.swift; sourceTree = "<group>"; };
+		EA286BC41C939E6700CC9036 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Views/ViewController.swift; sourceTree = "<group>"; };
 		EA5CD3FE1C8E29A10043E80C /* cape_prototype-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cape_prototype-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA5CD3FF1C8E29C60043E80C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = DataModel/Post.swift; sourceTree = "<group>"; };
 		EA5E2F541C8BCFAA00B28349 /* cape_prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cape_prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5E2F571C8BCFAA00B28349 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA5E2F591C8BCFAA00B28349 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA5E2F5C1C8BCFAA00B28349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA5E2F5E1C8BCFAA00B28349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5E2F611C8BCFAA00B28349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +66,9 @@
 		EA81B6181C92331600994B0E /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewModel.swift; path = "View Models/PostViewModel.swift"; sourceTree = "<group>"; };
 		EA81B61A1C9237BA00994B0E /* PostsGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsGateway.swift; path = Managers/PostsGateway.swift; sourceTree = "<group>"; };
 		EA81B61C1C923C2C00994B0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EAA3E8D41C922D490047ED06 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		EAD9C4AA1C9371C300323924 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatMessage.swift; path = DataModel/ChatMessage.swift; sourceTree = "<group>"; };
+		EAD9C4AC1C93796600323924 /* MessagesGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesGateway.swift; path = Managers/MessagesGateway.swift; sourceTree = "<group>"; };
+		EAD9C4B41C93933100323924 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+App.swift"; path = "Utils/UIColor+App.swift"; sourceTree = "<group>"; };
 		FEE5BEF058B1AE1A195F64BA /* Pods-cape_prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cape_prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cape_prototype/Pods-cape_prototype.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +115,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA286BC21C939E5C00CC9036 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA286BC31C939E6700CC9036 /* MessagesViewController.swift */,
+				EA286BC41C939E6700CC9036 /* ViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		EA5CD3F21C8E203E0043E80C /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				EA5CD3FF1C8E29C60043E80C /* Post.swift */,
+				EAD9C4AA1C9371C300323924 /* ChatMessage.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -140,12 +158,13 @@
 		EA5E2F561C8BCFAA00B28349 /* cape_prototype */ = {
 			isa = PBXGroup;
 			children = (
+				EA286BC21C939E5C00CC9036 /* Views */,
+				EAD9C4B31C93930C00323924 /* Utils */,
+				EAD9C4AE1C93915700323924 /* Controls */,
 				EA81B6171C9232FE00994B0E /* View Models */,
 				EAA3E8D61C922E020047ED06 /* Managers */,
 				EA5CD3F21C8E203E0043E80C /* DataModel */,
 				EA5E2F571C8BCFAA00B28349 /* AppDelegate.swift */,
-				EA5E2F591C8BCFAA00B28349 /* ViewController.swift */,
-				EAA3E8D41C922D490047ED06 /* MessagesViewController.swift */,
 				EA5E2F5B1C8BCFAA00B28349 /* Main.storyboard */,
 				EA5E2F5E1C8BCFAA00B28349 /* Assets.xcassets */,
 				EA5E2F601C8BCFAA00B28349 /* LaunchScreen.storyboard */,
@@ -186,8 +205,25 @@
 			isa = PBXGroup;
 			children = (
 				EA81B61A1C9237BA00994B0E /* PostsGateway.swift */,
+				EAD9C4AC1C93796600323924 /* MessagesGateway.swift */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		EAD9C4AE1C93915700323924 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				EA286BC01C939D8C00CC9036 /* ChatMessageTableViewCell.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		EAD9C4B31C93930C00323924 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EAD9C4B41C93933100323924 /* UIColor+App.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,12 +408,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA286BC51C939E6700CC9036 /* MessagesViewController.swift in Sources */,
+				EAD9C4AD1C93796600323924 /* MessagesGateway.swift in Sources */,
 				EA81B6191C92331600994B0E /* PostViewModel.swift in Sources */,
+				EAD9C4B51C93933100323924 /* UIColor+App.swift in Sources */,
+				EA286BC61C939E6700CC9036 /* ViewController.swift in Sources */,
 				EA5CD4001C8E29C60043E80C /* Post.swift in Sources */,
-				EA5E2F5A1C8BCFAA00B28349 /* ViewController.swift in Sources */,
-				EAA3E8D51C922D490047ED06 /* MessagesViewController.swift in Sources */,
 				EA81B61D1C923C2C00994B0E /* Constants.swift in Sources */,
+				EAD9C4AB1C9371C300323924 /* ChatMessage.swift in Sources */,
 				EA81B61B1C9237BA00994B0E /* PostsGateway.swift in Sources */,
+				EA286BC11C939D8C00CC9036 /* ChatMessageTableViewCell.swift in Sources */,
 				EA5E2F581C8BCFAA00B28349 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

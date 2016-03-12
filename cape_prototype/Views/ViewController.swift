@@ -13,10 +13,11 @@ import Foundation
 //TODO: load 10 with downloading other while scrolling
 //TODO: load only answered
 class ViewController: UIViewController {
-
+  
   @IBOutlet weak var postTable: UITableView!
-
+  
   var posts = [Post]()
+  var selectedPost: Post?
   let cellIdentifier = "Cell"
   var limit = 5
   
@@ -26,33 +27,44 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
     navigationItem.title = "Posts"
     initPostTable()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
     PostsGateway.getPosts { (postsArray) -> Void in
       self.posts = postsArray
       self.reloadPosts()
     }
+    
   }
-
-  func initPostTable() {
+  
+  private func initPostTable() {
     postTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
     postTable.reloadData()
   }
-  
 
   func reloadPosts() {
-     self.postTable.reloadData()
+    self.postTable.reloadData()
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    guard let msgController = segue.destinationViewController as? MessagesViewController else {
+      return
+    }
+
+    msgController.postID = selectedPost?.postID
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-
+  
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
-  
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return  posts.count
@@ -69,25 +81,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-   
-    // let id = posts[indexPath.row].key
+    selectedPost = posts[indexPath.row]
     self.performSegueWithIdentifier(Constants.toMessages, sender: nil)
   }
   
   func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     if editingStyle == .Delete {
-
       let postItem = posts[indexPath.row]
       postItem.ref?.removeValue()
-      
     }
   }
   
   func scrollViewDidScroll(scrollView: UIScrollView) {
-//    self.limit += 1
-//    self.posts.removeAll()
-//    getPosts()
+    //    self.limit += 1
+    //    self.posts.removeAll()
+    //    getPosts()
   }
+  
   
   
 }
