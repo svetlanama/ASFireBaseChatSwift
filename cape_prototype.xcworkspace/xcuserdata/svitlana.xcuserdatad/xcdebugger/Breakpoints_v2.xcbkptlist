@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cape_prototype/DataModel/Post.swift"
-            timestampString = "479427033.359488"
+            timestampString = "479516634.490449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "init(posterEmail:message:category:postDate:answered:helperEmail:shared:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "init(posterEmail:message:category:postDate:answered:helperId:shared:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cape_prototype/Managers/PostsGateway.swift"
-            timestampString = "479428394.740123"
+            timestampString = "479523241.839716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "createNewPost()"
             landmarkType = "5">
          </BreakpointContent>
@@ -144,6 +144,150 @@
             startingLineNumber = "79"
             endingLineNumber = "79"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cape_prototype/Managers/UserGateway.swift"
+            timestampString = "479523774.550876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "registerUser(_:pass:name:completion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static cape_prototype.UserGateway.registerUser (cape_prototype.UserGateway.Type)(Swift.String, pass : Swift.String, completion : (successful : Swift.Bool, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "cape_prototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/svitlana/Repos/ASFireBaseChatSwift/cape_prototype/Managers/UserGateway.swift"
+                  timestampString = "479516635.548663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static cape_prototype.UserGateway.(registerUser (cape_prototype.UserGateway.Type) -&gt; (Swift.String, pass : Swift.String, completion : (successful : Swift.Bool, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "cape_prototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/svitlana/Repos/ASFireBaseChatSwift/cape_prototype/Managers/UserGateway.swift"
+                  timestampString = "479516635.548899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "97">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cape_prototype/Managers/UserGateway.swift"
+            timestampString = "479523774.550876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "registerUser(_:pass:name:completion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static cape_prototype.UserGateway.(registerUser (cape_prototype.UserGateway.Type) -&gt; (Swift.String, pass : Swift.String, completion : (successful : Swift.Bool, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "cape_prototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/svitlana/Repos/ASFireBaseChatSwift/cape_prototype/Managers/UserGateway.swift"
+                  timestampString = "479516635.551083"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "725">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static cape_prototype.UserGateway.(registerUser (cape_prototype.UserGateway.Type) -&gt; (Swift.String, pass : Swift.String, completion : (successful : Swift.Bool, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "cape_prototype"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/svitlana/Repos/ASFireBaseChatSwift/cape_prototype/Managers/UserGateway.swift"
+                  timestampString = "479516635.551291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cape_prototype/Views/LoginViewController.swift"
+            timestampString = "479513222.9767"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "onRegistration(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cape_prototype/DataModel/Post.swift"
+            timestampString = "479514724.851714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "Post"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cape_prototype/DataModel/Post.swift"
+            timestampString = "479516634.490449"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "toAnyObject()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

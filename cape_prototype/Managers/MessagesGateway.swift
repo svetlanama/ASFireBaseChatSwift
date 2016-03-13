@@ -9,16 +9,9 @@
 import Foundation
 
 class MessagesGateway {
-  
-  class var ref: Firebase! {
-    get { return Firebase(url: Constants.fbUrl) }
-  }
-  
-  
-  class func getMessages(postID: String, completion: (messagesArray: [ChatMessage]) -> Void)  {
 
-    let postsRef = ref.childByAppendingPath("chatmessage")
-    postsRef.observeEventType(.Value, withBlock: {
+  class func getMessages(postID: String, completion: (messagesArray: [ChatMessage]) -> Void)  {
+    MESSAGE_REF.observeEventType(.Value, withBlock: {
       snapshot in
 
       var localMessages = [ChatMessage]()
@@ -42,16 +35,13 @@ class MessagesGateway {
   
   
   
-  class func createNewMessage(postID: String, senderEmail: String) {
-    let postsRef = ref.childByAppendingPath("chatmessage")
+  class func createNewMessage(postID: String, senderId: String) {
     let random = Int(arc4random_uniform(777))
     let message = "Message Title: " + String(random)
-    
-    let senderEmail = senderEmail//"sender@gmail.com"
     let date = ""
     
-    let chatMessageItem = ChatMessage(messageID: message, postID: postID, message: message, senderEmail: senderEmail, sentDate: date, last: 0, followup: 0, senderRead: 0, receiverRead: 0)
-    postsRef.childByAutoId().setValue(chatMessageItem.toAnyObject())
+    let chatMessageItem = ChatMessage(messageID: message, postID: postID, message: message, senderId: senderId, sentDate: date, last: 0, followup: 0, senderRead: 0, receiverRead: 0)
+    MESSAGE_REF.childByAutoId().setValue(chatMessageItem.toAnyObject())
   }
   
   

@@ -12,18 +12,20 @@ import UIKit
 class MessagesViewController : UIViewController {
   
   @IBOutlet weak var messagesTable: UITableView!
+  @IBOutlet weak var senderButton1: UIButton!
+  @IBOutlet weak var senderButton2: UIButton!
   
-  var postID: String!
+  var post: Post?
   var messages = [ChatMessage]()
-  let senderEmail1 = "Kate@gmail.com"
-  let senderEmail2 = "Tom@gmail.com"
+  var senderID1 = "" //SharedDelegate.sharedInstance.uid
+  var senderID2 = "" //One of the user's id helper@gmail.com
   
-  @IBAction func onPosterrClick(sender: AnyObject) {
-    MessagesGateway.createNewMessage(postID, senderEmail: senderEmail1)
+  @IBAction func onSender1Click(sender: AnyObject) {
+    MessagesGateway.createNewMessage(post!.postID, senderId: senderID1)
   }
   
-  @IBAction func onSenderClick(sender: AnyObject) {
-    MessagesGateway.createNewMessage(postID, senderEmail: senderEmail2)
+  @IBAction func onSender2Click(sender: AnyObject) {
+    MessagesGateway.createNewMessage(post!.postID, senderId: senderID2)
   }
   
   let cellIdentifierPoster = "poster_cell"
@@ -34,11 +36,31 @@ class MessagesViewController : UIViewController {
     
     navigationItem.title = "Messages"
     initMessageTable()
+    
+    senderID1 = SharedDelegate.sharedInstance.uid //me
+    senderID2 = isIamPoster() ? "8f9f7a95-5c3e-4eb5-bead-3b7e1b46e863" : (post?.posterID)!
+    //One of the user's id helper@gmail.com
+
+    if isIamPoster() {
+      senderButton1.setTitle("I'am poster", forState: UIControlState.Normal)
+      senderButton2.setTitle("Tom is helper", forState: UIControlState.Normal)
+    } else {
+      senderButton1.setTitle("I'am helper", forState: UIControlState.Normal)
+      senderButton2.setTitle("Tom is poster", forState: UIControlState.Normal)
+    }
+    
+  }
+  
+  func isIamPoster() -> Bool {
+    if post!.posterID == senderID1 {
+      return true
+    }
+    return false
   }
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    MessagesGateway.getMessages(postID, completion: {(messagesArray) -> Void in
+    MessagesGateway.getMessages(post!.postID, completion: {(messagesArray) -> Void in
       self.messages = messagesArray
       self.reloadMessages()
     })
@@ -51,7 +73,6 @@ class MessagesViewController : UIViewController {
   private func reloadMessages() {
     self.messagesTable.reloadData()
   }
-  
 }
 
 extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -70,7 +91,7 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
     let cell: ChatMessageTableViewCell!
     let msgItem: ChatMessage = messages[indexPath.row]
     
-    if  msgItem.senderEmail == senderEmail1 {
+    if  msgItem.senderID == senderID1 {
       cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierPoster) as! ChatMessageTableViewCell
     } else {
       cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierHelper) as! ChatMessageTableViewCell

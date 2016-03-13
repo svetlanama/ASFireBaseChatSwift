@@ -8,13 +8,20 @@
 
 import Foundation
 
+
+
 public class Constants {
   
   // Firebase url
-  internal static let fbUrl = "https://capeprototype.firebaseio.com"
-  //Seques
-  internal static let toMessages = "toMessages"
+
   
+  //Seques
+  //TODO: struct
+  internal static let toMessages = "toMessages"
+  internal static let toPosts = "toPosts"
+  internal static let toProfile = "toProfile"
+  internal static let toRegister = "toRegister"
+  internal static let toResetPassword = "toResetPassword"
   
   struct NotificationKey {
 

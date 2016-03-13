@@ -9,16 +9,10 @@
 import Foundation
 
 class PostsGateway {
-  
-  class var ref: Firebase! {
-    get { return Firebase(url: Constants.fbUrl) }
-  }
-  
-  
+
   class func getPosts(completion: (postsArray: [Post]) -> Void)  {
-    let postsRef = ref.childByAppendingPath("post")
-    
-    postsRef.observeEventType(.Value, withBlock: {
+
+    POST_REF.observeEventType(.Value, withBlock: {
       snapshot in
       //postsRef.queryLimitedToFirst(UInt(limit)).observeEventType(.Value, withBlock: {
       //  snapshot in
@@ -39,19 +33,14 @@ class PostsGateway {
     
   }
   
-  
-  
   class func createNewPost() {
-    let postsRef = ref.childByAppendingPath("post")
     let random = Int(arc4random_uniform(333))
-    let message = "Post Title: " + String(random)
     
-    let posterEmail = "sveta@gmail.com"
-    let category = 0 //TODO: ask what does it mean
+    let message = "Post Title: " + String(random)
     let date = ""
     
-    let postItem = Post(posterEmail: posterEmail, message: message, category: category, postDate: date)
-    postsRef.childByAutoId().setValue(postItem.toAnyObject())
+    let postItem = Post(message: message, category: 0, postDate: date)
+    POST_REF.childByAutoId().setValue(postItem.toAnyObject())
   }
   
   

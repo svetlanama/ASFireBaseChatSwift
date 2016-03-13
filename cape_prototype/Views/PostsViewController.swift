@@ -12,7 +12,7 @@ import Foundation
 
 //TODO: load 10 with downloading other while scrolling
 //TODO: load only answered
-class ViewController: UIViewController {
+class PostsViewController: UIViewController {
   
   @IBOutlet weak var postTable: UITableView!
   
@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     navigationItem.title = "Posts"
+    let rightButton = UIBarButtonItem(title: "Profile", style: .Plain, target: self, action: "onProfile")
+    navigationItem.rightBarButtonItem = rightButton
+    navigationItem.leftBarButtonItem = nil
+    
     initPostTable()
   }
   
@@ -50,12 +54,16 @@ class ViewController: UIViewController {
     self.postTable.reloadData()
   }
   
+  func onProfile() {
+    self.performSegueWithIdentifier(Constants.toProfile, sender: nil)
+  }
+  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
     guard let msgController = segue.destinationViewController as? MessagesViewController else {
       return
     }
 
-    msgController.postID = selectedPost?.postID
+    msgController.post = selectedPost!
   }
   
   override func didReceiveMemoryWarning() {
@@ -64,7 +72,7 @@ class ViewController: UIViewController {
   
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return  posts.count
@@ -79,8 +87,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     cell.textLabel?.text = posts[indexPath.row].message
     return cell
   }
-  
-  func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     selectedPost = posts[indexPath.row]
     self.performSegueWithIdentifier(Constants.toMessages, sender: nil)
   }
