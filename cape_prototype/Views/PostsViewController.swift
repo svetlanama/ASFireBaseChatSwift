@@ -31,7 +31,7 @@ class PostsViewController: UIViewController {
     navigationItem.title = "Posts"
     let rightButton = UIBarButtonItem(title: "Profile", style: .Plain, target: self, action: "onProfile")
     navigationItem.rightBarButtonItem = rightButton
-    navigationItem.leftBarButtonItem = nil
+    navigationItem.setHidesBackButton(true, animated: false)
     
     initPostTable()
   }

@@ -33,6 +33,7 @@ class RegistrationViewController: UIViewController {
       Void in
       
       if successful {
+        //self.navigationController?.popToRootViewControllerAnimated(false)
         self.performSegueWithIdentifier(Constants.toPosts, sender: nil)
       } else {
         print("user registered error: ", error?.code)
