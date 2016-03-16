@@ -28,9 +28,7 @@ class LoginViewController: UIViewController {
   @IBAction func onForgotPassword(sender: AnyObject) {
       self.performSegueWithIdentifier(Constants.toResetPassword, sender: nil)
   }
-  
 
-  
   func loginUser() {
     UserGateway.login(txtEmail.text!, pass: txtPass.text!) { (successful, error) ->
       Void in
@@ -47,15 +45,19 @@ class LoginViewController: UIViewController {
     }
   }
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+//    if SharedDelegate.sharedInstance.isSessionActive() {
+//      self.performSegueWithIdentifier(Constants.toPosts, sender: nil)
+//    }
+    SharedDelegate.sharedInstance.setSessionInvalid()
     initControls()
   }
   
   func initControls() {
-    txtEmail.text = "alexandrovna.sveta7@gmail.com"
-    txtPass.text = "sveta777"
+    txtEmail.text = "me@gmail.com"
+    txtPass.text = "test777"
   }
   
   

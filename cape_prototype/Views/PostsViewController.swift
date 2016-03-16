@@ -28,16 +28,18 @@ class PostsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationItem.title = "Posts"
+    navigationItem.title = "Chats"
     let rightButton = UIBarButtonItem(title: "Profile", style: .Plain, target: self, action: "onProfile")
     navigationItem.rightBarButtonItem = rightButton
-    navigationItem.setHidesBackButton(true, animated: false)
+
     
     initPostTable()
   }
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
+    
+    navigationItem.setHidesBackButton(true, animated: false)
     PostsGateway.getPosts { (postsArray) -> Void in
       self.posts = postsArray
       self.reloadPosts()

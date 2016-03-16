@@ -15,7 +15,6 @@ public class ChatMessage: NSObject {
   let messageID: String?
   let postID: String!
   let message: String!
-//  let senderEmail: String!
   let senderID: String!
   let sentDate: String!
   let last: Int
@@ -24,14 +23,12 @@ public class ChatMessage: NSObject {
   let receiverRead: Int
   
   let ref: Firebase?
-  
-  
+
   // cretae object model for push to DB
   init (messageID: String, postID: String, message: String, senderId: String, sentDate: String, last: Int, followup: Int, senderRead: Int, receiverRead: Int) {
     
     self.messageID = nil
     self.postID = postID
-//    self.senderEmail = senderEmail
     self.senderID = senderId
     self.message = message
     self.sentDate = sentDate
@@ -45,7 +42,6 @@ public class ChatMessage: NSObject {
   init(snapshot: FDataSnapshot) {
     messageID = snapshot.key
     postID = snapshot.value["PostID"] as! String
-//    senderEmail = snapshot.value["SenderEmail"] as! String
     senderID = snapshot.value["SenderID"] as! String
     message = snapshot.value["Message"] as! String
     sentDate = snapshot.value["SentDate"] as! String

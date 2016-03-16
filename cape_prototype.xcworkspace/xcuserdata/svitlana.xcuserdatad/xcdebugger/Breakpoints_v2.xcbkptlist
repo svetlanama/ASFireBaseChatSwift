@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cape_prototype/DataModel/Post.swift"
-            timestampString = "479516634.490449"
+            timestampString = "479863515.801549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "init(posterEmail:message:category:postDate:answered:helperId:shared:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(message:category:postDate:answered:helperId:shared:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cape_prototype/Managers/PostsGateway.swift"
-            timestampString = "479523241.839716"
+            timestampString = "479864491.906839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cape_prototype/DataModel/Post.swift"
-            timestampString = "479514724.851714"
+            timestampString = "479863515.801549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "Post"
             landmarkType = "3">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cape_prototype/DataModel/Post.swift"
-            timestampString = "479516634.490449"
+            timestampString = "479863515.801549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "toAnyObject()"
             landmarkType = "5">
          </BreakpointContent>

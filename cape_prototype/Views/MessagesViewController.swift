@@ -38,25 +38,30 @@ class MessagesViewController : UIViewController {
     initMessageTable()
     
     senderID1 = SharedDelegate.sharedInstance.uid //me
-    senderID2 = isIamPoster() ? "8f9f7a95-5c3e-4eb5-bead-3b7e1b46e863" : (post?.posterID)!
+    senderID2 = "8f9f7a95-5c3e-4eb5-bead-3b7e1b46e863"
+    
+    senderButton1.setTitle("Me", forState: UIControlState.Normal)
+    senderButton2.setTitle("Tom", forState: UIControlState.Normal)
+    
+    //isIamPoster() ? "8f9f7a95-5c3e-4eb5-bead-3b7e1b46e863" : (post?.posterID)!
     //One of the user's id helper@gmail.com
 
-    if isIamPoster() {
-      senderButton1.setTitle("I'am poster", forState: UIControlState.Normal)
-      senderButton2.setTitle("Tom is helper", forState: UIControlState.Normal)
-    } else {
-      senderButton1.setTitle("I'am helper", forState: UIControlState.Normal)
-      senderButton2.setTitle("Tom is poster", forState: UIControlState.Normal)
-    }
+//    if isIamPoster() {
+//      senderButton1.setTitle("I'am poster", forState: UIControlState.Normal)
+//      senderButton2.setTitle("Tom is helper", forState: UIControlState.Normal)
+//    } else {
+//      senderButton1.setTitle("I'am helper", forState: UIControlState.Normal)
+//      senderButton2.setTitle("Tom is poster", forState: UIControlState.Normal)
+//    }
     
   }
   
-  func isIamPoster() -> Bool {
-    if post!.posterID == senderID1 {
-      return true
-    }
-    return false
-  }
+//  func isIamPoster() -> Bool {
+//    if post!.posterID == senderID1 {
+//      return true
+//    }
+//    return false
+//  }
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)

@@ -9,14 +9,14 @@
 import Foundation
 
 class PostsGateway {
+  
+  
 
   class func getPosts(completion: (postsArray: [Post]) -> Void)  {
 
     POST_REF.observeEventType(.Value, withBlock: {
       snapshot in
-      //postsRef.queryLimitedToFirst(UInt(limit)).observeEventType(.Value, withBlock: {
-      //  snapshot in
-      
+
       var localPosts = [Post]()
       for item in snapshot.children {
         let postItem = Post(snapshot: item as! FDataSnapshot)
@@ -34,9 +34,9 @@ class PostsGateway {
   }
   
   class func createNewPost() {
-    let random = Int(arc4random_uniform(333))
-    
-    let message = "Post Title: " + String(random)
+
+    let r = Int(arc4random_uniform(UInt32(chatsTitles.count - 1)))
+    let message = chatsTitles[r]
     let date = ""
     
     let postItem = Post(message: message, category: 0, postDate: date)

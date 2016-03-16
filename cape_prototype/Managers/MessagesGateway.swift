@@ -36,8 +36,9 @@ class MessagesGateway {
   
   
   class func createNewMessage(postID: String, senderId: String) {
-    let random = Int(arc4random_uniform(777))
-    let message = "Message Title: " + String(random)
+   
+    let r = Int(arc4random_uniform(UInt32(messages.count - 1)))
+    let message = messages[r]
     let date = ""
     
     let chatMessageItem = ChatMessage(messageID: message, postID: postID, message: message, senderId: senderId, sentDate: date, last: 0, followup: 0, senderRead: 0, receiverRead: 0)

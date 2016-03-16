@@ -10,16 +10,14 @@ import Foundation
 
 public class Post: NSObject {
   
-  let postID: String! //postNo
+  let postID: String! 
   let posterID: String!
-//  let posterEmail: String!
   let message: String!
   
   let category: Int!
   let postDate: String!
   
   let answered: Int!
-//  let helperEmail: String!
   let helperID: String!
   let shared: Int!
   
@@ -29,12 +27,10 @@ public class Post: NSObject {
     postID = snapshot.key
     posterID = snapshot.value["PosterID"] as! String
     helperID = snapshot.value["HelperID"] as! String
-//    posterEmail = snapshot.value["PosterEmail"] as! String
     message = snapshot.value["Message"] as! String
     category = Int(snapshot.value["Category"] as? String ?? "0")!
     postDate = snapshot.value["PostDate"] as! String
     answered = Int(snapshot.value["Answered"] as? String ?? "0")!
-//    helperEmail = snapshot.value["HelperEmail"] as? String ?? ""
     shared = Int(snapshot.value["Shared"] as? String ?? "0")!
     ref = snapshot.ref
   }
@@ -45,12 +41,10 @@ public class Post: NSObject {
     self.postID = nil
     self.posterID = SharedDelegate.sharedInstance.uid
     self.helperID = helperId
-//    self.posterEmail = posterEmail
     self.message = message
     self.category = category
     self.postDate = postDate
     self.answered = answered
-//    self.helperEmail = helperEmail
     self.shared = shared
     self.ref = nil
   }
@@ -66,6 +60,4 @@ public class Post: NSObject {
       "Shared": shared
     ]
   }
-//      "HelperEmail": helperEmail,
-//      "PosterEmail": posterEmail,
 }
